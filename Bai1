@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	// Complete the program
+    string a,b;
+    cin>>a>>b;
+    cout<<a.length()<<' '<<b.length()<<endl;
+    string c = a + b;
+    cout<<c<<endl;
+    char d = a[0];
+    char e = b[0];
+    char o;
+    o=a[0];
+    a[0]=b[0];
+    b[0]=o;
+    cout<<a<<' '<<b;
+    return 0;
+}
