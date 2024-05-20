@@ -1,0 +1,17 @@
+string timeConversion(string s){
+int n = s.length();
+string word = s.substr(8, 2);
+string hour = s.substr(0,2);
+string minute = s.substr(3,2);
+string second = s.substr(6,2);
+int hours = stoi(hour);
+if (word == "AM"){
+    if (hours == 12) hours = 0;
+}else {
+    if (hours <12) hours +=12;
+}
+if(hours < 10) hour = '0' + to_string(hours);
+else hour = to_string(hours);
+string back = hour + ':' + minute + ':' + second;
+return back;
+}
